@@ -1,0 +1,27 @@
+-standalone: \
+	../org.test.x-index/target/index.xml;name="bundles"
+
+-runrepos: bundles
+
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+
+-runee: JavaSE-1.8
+
+-resolve.effective: resolve, active
+
+-runpath: biz.aQute.remote.launcher;version=latest
+ 
+-runremote: debug;\
+	shell   =   -1; \
+	jdb     =   5005; \
+	host    =   localhost; \
+	agent   =   29998; \
+	timeout =   30000
+
+-runproperties: gosh.args=--noshutdown
+ 
+-runtrace: true 
+
+-runrequires: bnd.identity;id='org.test.bundle'
+
+-runbundles: org.test.bundle;version='[0.2.0,0.2.1)'
