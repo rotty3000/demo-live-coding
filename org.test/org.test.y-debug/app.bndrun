@@ -1,11 +1,4 @@
--standalone: \
-	../org.test.x-index/target/index.xml;name="bundles"
-
--runrepos: bundles
-
--runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
-
--runee: JavaSE-1.8
+-distro: ${.}/../../distro.jar;version=file
 
 -resolve.effective: resolve, active
 
